@@ -1,1 +1,5 @@
 Whats good
+<<<<<<< HEAD
+=======
+Not much
+>>>>>>> main

@@ -13,6 +13,7 @@ public class Balloon : MonoBehaviour
     //scale to increase each time the balloon is clicked
     public float scaleToIncrease = 0.10f;
 
+    public scoreManager scoreManager; //variable to reference the scoreManager script
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class Balloon : MonoBehaviour
         if (clickToPop == 0)
         {
             //Destroys balloons when threshold hits 0 and displays message
+            scoreManager.increaseScore(scoreToGive);
             Destroy(gameObject);
             Debug.Log("Balloon Destroyed!");
 

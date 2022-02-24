@@ -17,14 +17,11 @@ public class Balloon : MonoBehaviour
 
     void Start()
     {
-        
+        //references scoreManager script
+        scoreManager = GameObject.Find("scoreManager").GetComponent<scoreManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     void OnMouseDown()
     {
@@ -41,6 +38,12 @@ public class Balloon : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Balloon Destroyed!");
 
+        }
+
+        if (clickToPop <= 1)
+        {
+
+            Debug.Log("Ooof! You missed a Balloon!");
         }
     }
 }
